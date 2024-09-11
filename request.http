@@ -1,0 +1,106 @@
+GET http://localhost:4004/service/history
+
+
+#############################################################
+GET http://localhost:4004/service/authors
+
+#############################################################
+GET http://localhost:4004/service/books
+
+#############################################################
+POST http://localhost:4004/service/users
+Content-Type: application/json
+
+{
+    "ID": "1",
+    "first_name": "prathish",
+    "last_name": "manjini",
+    "dob": "2003-05-12"
+}
+
+#############################################################
+
+POST http://localhost:4004/service/authors
+Content-Type: application/json
+
+{
+    "ID": "1",
+    "first_name": "sachin",
+    "last_name": "sidra",
+    "dob": "1995-07-04"
+}
+#############################################################
+
+POST http://localhost:4004/service/books
+Content-Type: application/json
+
+{
+    "ID": "100",
+    "book_name": "Harry Potter",
+    "genre": "comics",
+    "edition": "1",
+    "published_year": "2000-12-12",
+    "author_ID": "25"
+}
+
+#############################################################
+
+PATCH http://localhost:4004/service/authors('1')
+Content-Type: application/json
+
+{
+    "first_name": "Mr Sachin"
+}
+
+#############################################################
+
+PATCH http://localhost:4004/service/authors('1')
+Content-Type: application/json
+
+{
+    "last_name": "cruize"
+}
+#############################################################
+
+PATCH http://localhost:4004/service/books('1')
+Content-Type: application/json
+
+{
+    "published_year":"2001-12-12"
+}
+
+###############################################################
+DELETE http://localhost:4004/service/books('1')
+
+###############################################################
+
+DELETE http://localhost:4004/service/authors('1')
+
+###############################################################
+DELETE http://localhost:4004/service/users('1')
+
+################################################################
+
+POST http://localhost:4004/service/return
+Content-Type: application/json
+
+{
+    "book_issue_id": "4608897d-07d2-4978-a212-288e648f7e7a"
+}
+
+#############################################################
+GET http://localhost:4004/service/search(genre='comedy',book_name='Needless')
+
+#############################################################
+
+POST http://localhost:4004/service/issue 
+Content-Type: application/json
+
+{
+    "user_id": "1",
+    "book_id": "1"
+}
+##############
+GET https://port4004-workspaces-ws-76b87.us10.trial.applicationstudio.cloud.sap/service/authors
+Cookie: country=IN; s_plt=NaN; s_pltp=undefined; AMCVS_227AC2D754DCAB340A4C98C6%40AdobeOrg=1; s_cc=true; rxVisitor=17253652289410Q0I4U15A2SGDGBC7KJTTCIN6CUKR3FQ; dtSa=-; dtCookie=v_4_srv_3_sn_LSI0MSOOAJU0CG2H4KJGJVG2F617A8FQ_perc_100000_ol_0_mul_1_app-3Acab67a9e1543df82_0; AMCV_227AC2D754DCAB340A4C98C6%40AdobeOrg=179643557%7CMCIDTS%7C19974%7CMCMID%7C84608630569386777462335161545936624096%7CMCAAMLH-1726324031%7C12%7CMCAAMB-1726324031%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1725726431s%7CNONE%7CMCAID%7CNONE%7CvVersion%7C5.5.0; s_sq=%5B%5BB%5D%5D; dtPC=3$121607414_998h-vDUFFVUAPMSECEFCSKAUIPDTLALVHMKRB-0e0; rxvt=1725727008801|1725725208801; workspaces-ws-76b87_WSR_SESSIONID=QTTAcdiePklsTi6TklKzJWNkwMlHz639D6gTD2oYtc/4ilGWwHht98UtAQ3s1jWLOQuxc42c7kF1kt4azzLGQw==
+####################
